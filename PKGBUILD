@@ -1,5 +1,5 @@
 pkgname=dbus
-pkgver=1.14.10
+pkgver=1.16.2
 pkgrel=1
 pkgdesc="Freedesktop.org message bus system (without systemd)"
 arch=('x86_64')
