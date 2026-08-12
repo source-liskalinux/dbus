@@ -12,7 +12,7 @@ source=("https://dbus.freedesktop.org/releases/${pkgname}/${pkgname}-${pkgver}.t
 sha256sums=('SKIP')
 
 build() {
-    meson setup "${pkgname}-${pkgver}" build \
+    meson setup "${srcdir}/${pkgname}-${pkgver}" build \
         --prefix=/usr \
         --sysconfdir=/etc \
         --localstatedir=/var \
