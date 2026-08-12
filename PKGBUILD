@@ -19,6 +19,7 @@ build() {
         --libexecdir=/usr/lib/dbus-1.0 \
         -Dsystemd=disabled \
         -Duser_session=false \
+        -Ddbus_user=root \
         -Dxml_docs=enabled \
         -Dsession_socket_dir=/tmp
     meson compile -C build
@@ -28,4 +29,7 @@ package() {
     DESTDIR="${pkgdir}" meson install -C build
     rm -rf "${pkgdir}/usr/lib/systemd"
     rm -rf "${pkgdir}/lib/systemd"
+    install -d -m 755 "${pkgdir}/etc"
+    echo "messagebus:x:18:" >> "${pkgdir}/etc/group"
+    echo "messagebus:x:18:18:D-Bus Message Daemon User:/run/dbus:/bin/false" >> "${pkgdir}/etc/passwd"
 }
