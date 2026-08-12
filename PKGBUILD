@@ -18,7 +18,6 @@ build() {
         --localstatedir=/var \
         --libexecdir=/usr/lib/dbus-1.0 \
         -Dsystemd=disabled \
-        -Dsystemd_user_services=false \
         -Duser_session=false \
         -Delogind=enabled \
         -Dxml_docs=enabled \
