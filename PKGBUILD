@@ -19,7 +19,6 @@ build() {
         --libexecdir=/usr/lib/dbus-1.0 \
         -Dsystemd=disabled \
         -Duser_session=false \
-        -Delogind=enabled \
         -Dxml_docs=enabled \
         -Dsession_socket_dir=/tmp
     meson compile -C build
