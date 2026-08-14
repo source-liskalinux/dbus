@@ -1,3 +1,8 @@
+# PKGBUILD For dbus
+
+# Contributor: Janorovic Volkov <janorovicvolkov@gmail.com>
+# Maintainer: Janorovic Volkov <janorovicvolkov@gmail.com>
+
 pkgname=dbus
 pkgver=1.16.2
 pkgrel=1
